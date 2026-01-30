@@ -8,4 +8,33 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  const applyTheme = (theme) => {
+    if (theme === 'light') {
+      body.classList.add('light-theme');
+      themeToggle.textContent = '☀️';
+    } else {
+      body.classList.remove('light-theme');
+      themeToggle.textContent = '🌙';
+    }
+  };
+
+  themeToggle.addEventListener('click', () => {
+    const isLightTheme = body.classList.contains('light-theme');
+    if (isLightTheme) {
+      localStorage.setItem('theme', 'dark');
+      applyTheme('dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+      applyTheme('light');
+    }
+  });
+
+  // Apply saved theme on load
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  applyTheme(savedTheme);
 });

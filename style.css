@@ -7,6 +7,14 @@
     --font-family: 'Poppins', sans-serif;
 }
 
+.light-theme {
+    --primary-color: #FFFFFF;
+    --secondary-color: #F5F5F5;
+    --accent-color: #007BFF;
+    --text-color: #121212;
+    --shadow-color: rgba(0, 123, 255, 0.2);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +30,7 @@ body {
     background-color: var(--primary-color);
     color: var(--text-color);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header */
@@ -34,6 +43,11 @@ header {
     backdrop-filter: blur(10px);
     z-index: 100;
     border-bottom: 1px solid var(--secondary-color);
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.light-theme header {
+    background: rgba(255, 255, 255, 0.8);
 }
 
 nav {
@@ -53,6 +67,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -65,6 +80,19 @@ nav a {
 
 nav a:hover {
     color: var(--accent-color);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
 }
 
 /* Main Content */
@@ -98,6 +126,10 @@ section {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.light-theme #hero p {
+    color: rgba(0, 0, 0, 0.7);
 }
 
 /* Buttons */
@@ -139,7 +171,7 @@ h2 {
     border-radius: 10px;
     text-align: center;
     border: 1px solid transparent;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .service-card:hover {
@@ -167,6 +199,7 @@ h2 {
     border-radius: 10px;
     text-align: center;
     border: 1px solid var(--secondary-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .pricing-card.featured {
@@ -206,6 +239,7 @@ h2 {
     padding: 2rem;
     border-radius: 10px;
     border-left: 4px solid var(--accent-color);
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
 }
 
 .review-card p {
@@ -235,7 +269,7 @@ h2 {
     border-radius: 5px;
     color: var(--text-color);
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 #contact input:focus, #contact textarea:focus {
@@ -253,6 +287,7 @@ footer {
     padding: 2rem 5%;
     margin-top: 3rem;
     border-top: 1px solid var(--secondary-color);
+    transition: border-top-color 0.3s ease;
 }
 
 /* Responsive */
@@ -260,6 +295,11 @@ footer {
     nav {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #hero h1 {
