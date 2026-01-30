@@ -1,14 +1,120 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로게이머 코칭</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+    <header>
+        <nav>
+            <div class="logo">ProCoach</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Unlock Your Potential</h1>
+                <p>Level up your game with personalized coaching from pro players.</p>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service-container">
+                <div class="service-card">
+                    <h3>1:1 Coaching</h3>
+                    <p>Personalized sessions tailored to your specific needs and goals.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Team Coaching</h3>
+                    <p>Improve your team's strategy, communication, and overall performance.</p>
+                </div>
+                <div class="service-card">
+                    <h3>VOD Review</h3>
+                    <p>In-depth analysis of your gameplay footage to identify areas for improvement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <p class="price">₩100,000</p>
+                    <ul>
+                        <li>2 x 1:1 Coaching Sessions</li>
+                        <li>1 x VOD Review</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Choose Plan</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Premium</h3>
+                    <p class="price">₩250,000</p>
+                    <ul>
+                        <li>4 x 1:1 Coaching Sessions</li>
+                        <li>3 x VOD Reviews</li>
+                        <li>1 x Team Coaching Session</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Choose Plan</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <p class="price">Contact Us</p>
+                    <ul>
+                        <li>Unlimited Coaching</li>
+                        <li>Unlimited VOD Reviews</li>
+                        <li>Dedicated Pro Coach</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Choose Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>What Our Students Say</h2>
+            <div class="review-container">
+                <div class="review-card">
+                    <p>"My skills improved dramatically after just a few sessions. Highly recommended!"</p>
+                    <span>- Challenger Player</span>
+                </div>
+                <div class="review-card">
+                    <p>"The team coaching was a game-changer for us. We're now winning tournaments!"</p>
+                    <span>- Team Captain</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ProCoach. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
