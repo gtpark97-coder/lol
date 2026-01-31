@@ -230,11 +230,13 @@ h2 {
 
 /* Instructor Section */
 #instructors .instructor-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #instructors .instructor-profile {
@@ -242,7 +244,6 @@ h2 {
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    max-width: 400px;
     border: 1px solid transparent;
     transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
@@ -261,6 +262,14 @@ h2 {
 #instructors .instructor-profile p {
     font-size: 1rem;
     line-height: 1.5;
+}
+
+#instructors .more-instructors {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 /* Contact Section */
