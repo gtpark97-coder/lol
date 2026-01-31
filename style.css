@@ -253,6 +253,23 @@ h2 {
 }
 
 /* Contact Section */
+#contact .kakao-consult {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+#contact .kakao-consult a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+#contact .kakao-consult a:hover {
+    color: var(--text-color);
+}
+
 #contact form {
     max-width: 600px;
     margin: 0 auto;
